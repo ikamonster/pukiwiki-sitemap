@@ -8,7 +8,9 @@
 
 ## インストール
 
-sitemap.inc.php を PukiWiki の plugin ディレクトリに配置してください。
+下記GitHubページからダウンロードした sitemap.inc.php を PukiWiki の plugin ディレクトリに配置してください。
+
+[https://github.com/ikamonster/pukiwiki-sitemap](https://github.com/ikamonster/pukiwiki-sitemap)
 
 ## 使い方
 
