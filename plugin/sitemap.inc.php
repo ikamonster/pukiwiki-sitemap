@@ -1,7 +1,7 @@
 <?php
 /*
 PukiWiki - Yet another WikiWikiWeb clone.
-sitemap.inc.php, v1.00 2020 M.Taniguchi
+sitemap.inc.php, v1.01 2020 M.Taniguchi
 License: GPL v3 or (at your option) any later version
 
 サイトマップを出力するPukiWiki用プラグイン。
@@ -49,7 +49,7 @@ function plugin_sitemap_action() {
 				&& check_readable($page, false, false)	// 閲覧可能なページのみ対象（ただし、これを実行するユーザーの権限において）
 			) {
 				$isHome = ($page === $defaultpage);
-				$url = $script . (!$isHome ? '?' . str_replace('%2F', '/', urlencode($page)) : '');
+				$url = get_page_uri($page, PKWK_URI_ABSOLUTE);
 				$time = date('Y-m-d\TH:i:sP', get_filetime($page));
 				$urls[] = '<url><loc>' . $url . '</loc><lastmod>' . $time . "</lastmod></url>\n";
 			}
